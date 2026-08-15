@@ -1,0 +1,218 @@
+.footer {
+  background: #0a1628;
+  color: white;
+}
+
+/* Top shloka band */
+.footer-top {
+  background: linear-gradient(135deg, #0d2a2a, #0a1628);
+  border-bottom: 1px solid rgba(13, 148, 136, 0.15);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-shloka {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.shloka-text {
+  font-size: 1rem;
+  color: rgba(245, 158, 11, 0.85);
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+}
+
+.shloka-ref {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.06em;
+}
+
+/* Main grid */
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+/* Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo-icon {
+  font-size: 1.5rem;
+  color: #14b8a6;
+  animation: spin 12s linear infinite;
+}
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.footer-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+.footer-logo-sub {
+  font-size: 0.65rem;
+  color: rgba(13, 148, 136, 0.8);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer-bio {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: rgba(13, 148, 136, 0.8);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-btn {
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-btn:hover {
+  background: rgba(13, 148, 136, 0.3);
+  border-color: rgba(13, 148, 136, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Link groups */
+.footer-group-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(13, 148, 136, 0.9);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.83rem;
+  transition: color 0.25s ease;
+}
+.footer-link:hover { color: #14b8a6; }
+
+.footer-service-item {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Areas */
+.footer-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-area-tag {
+  background: rgba(13, 148, 136, 0.1);
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  color: rgba(13, 148, 136, 0.8);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+
+.footer-area-more {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.4);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.68rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+}
+
+.footer-contact-link {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.footer-contact-link:hover { color: #14b8a6; }
+.footer-contact-text { color: rgba(255,255,255,0.5); }
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem 2rem;
+}
+
+.footer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-copy, .footer-made {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* Font helpers */
+.devanagari { font-family: 'Noto Sans Devanagari', sans-serif; }
+.gujarati { font-family: 'Noto Sans Gujarati', sans-serif; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 600px) {
+  .footer-main { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+}

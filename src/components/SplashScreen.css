@@ -1,0 +1,178 @@
+.splash-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(145deg, #0a1628 0%, #0d2a2a 40%, #0a1628 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  overflow: hidden;
+}
+
+.splash-enter { opacity: 0; transform: scale(1.02); }
+.splash-visible { opacity: 1; transform: scale(1); }
+.splash-exit { opacity: 0; transform: scale(0.96); pointer-events: none; }
+
+/* Background orbs */
+.splash-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orbFloat 8s ease-in-out infinite;
+}
+.splash-orb-1 {
+  width: 400px; height: 400px;
+  background: rgba(13, 148, 136, 0.2);
+  top: -100px; left: -100px;
+  animation-delay: 0s;
+}
+.splash-orb-2 {
+  width: 300px; height: 300px;
+  background: rgba(245, 158, 11, 0.12);
+  bottom: -80px; right: -60px;
+  animation-delay: -3s;
+}
+.splash-orb-3 {
+  width: 200px; height: 200px;
+  background: rgba(13, 148, 136, 0.1);
+  top: 50%; right: 20%;
+  animation-delay: -5s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -30px) scale(1.05); }
+}
+
+/* Shloka */
+.splash-shloka {
+  text-align: center;
+  padding: 0 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideDown 1s ease 0.3s forwards;
+}
+
+@keyframes slideDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shloka-text {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: rgba(245, 158, 11, 0.9);
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+}
+
+.shloka-source {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.08em;
+}
+
+/* Center brand */
+.splash-center {
+  text-align: center;
+  opacity: 0;
+  animation: fadeUpIn 1s ease 0.7s forwards;
+}
+
+@keyframes fadeUpIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.splash-lotus {
+  font-size: 2rem;
+  color: var(--color-primary, #14b8a6);
+  animation: spin 8s linear infinite;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.splash-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 40px rgba(13, 148, 136, 0.5);
+}
+
+.splash-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.divider-line {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(13, 148, 136, 0.6));
+}
+.divider-line:last-child {
+  background: linear-gradient(to left, transparent, rgba(13, 148, 136, 0.6));
+}
+
+.divider-gem {
+  color: #14b8a6;
+  font-size: 0.6rem;
+}
+
+.splash-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* Loader */
+.splash-loader {
+  opacity: 0;
+  animation: fadeUpIn 1s ease 1.2s forwards;
+}
+
+.loader-track {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #f59e0b);
+  border-radius: 2px;
+  animation: load 3.2s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;
+  width: 0;
+}
+
+@keyframes load {
+  to { width: 100%; }
+}
+
+/* Font classes */
+.devanagari { font-family: 'Noto Sans Devanagari', sans-serif; }
+.gujarati { font-family: 'Noto Sans Gujarati', sans-serif; }
+
+/* Mobile */
+@media (max-width: 480px) {
+  .splash-brand { font-size: 1.6rem; letter-spacing: 0.08em; }
+  .shloka-text { font-size: 0.9rem; }
+  .loader-track { width: 140px; }
+}
