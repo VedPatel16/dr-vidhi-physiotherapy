@@ -1,13 +1,10 @@
-// ─── Form Submission Utility ─────────────────────────────────────────────────
-// Uses EmailJS to send form data to Dr. Vidhi's email.
-// Setup: Create account at https://emailjs.com
-//        Replace SERVICE_ID, TEMPLATE_IDs, and PUBLIC_KEY below.
+
 
 export const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_8hq5whk',
-  PATIENT_TEMPLATE_ID: 'template_jtx9ad7',
-  JOIN_TEMPLATE_ID: 'template_k6ny596',
-  PUBLIC_KEY: 'RS2y26pBMbJEXsp76',
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  PATIENT_TEMPLATE_ID: import.meta.env.VITE_EMAILJS_PATIENT_TEMPLATE,
+  JOIN_TEMPLATE_ID: import.meta.env.VITE_EMAILJS_JOIN_TEMPLATE,
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 };
 
 // Send patient callback request
