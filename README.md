@@ -1,6 +1,7 @@
 # Dr. Vidhi Physiotherapy Website
 
 A modern, responsive website for Dr. Vidhi Patel — Expert Physiotherapist in Gandhinagar.
+# website link : https://dr-vidhi-physiotherapy.vercel.app/
 
 ---
 
@@ -72,8 +73,8 @@ npm run build
 Edit `src/data/siteData.js`:
 ```js
 export const doctorInfo = {
-  phone: '+91 XXXXX XXXXX',   // Dr. Vidhi's actual phone
-  email: 'actual@email.com',  // Actual email
+  phone: '+91 XXXXX XXXXX',   // ( shows actual phone number of Dr.Vidhi Patel)
+  email: 'dr.vidhi97@email.com',
   ...
 }
 ```
